@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMILEY SMILE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class = "header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+<div class="text-box">
+    <h1>Introduction</h1>
+    <h3>Hello ladies and Gentlemen, My name is Chittipriya. And I am currently pursing
+        <br>my BCA degree.
+        <br>There are nothing much to write about me, but I am practicing and developing
+        <br>my skills in web development and some other programming languages.
+        <br>The percentage of my result is until now is 86%
+        <br>Hope, you had a great visit in my website portfolio.</h3>
+        <a href="" class="hero-btn">Ho Ho Ho!</a>
+        </div>
+    </section>
+
+    <!-- ABOUT-->
+    
+    <section class="about">
+        <h1>About My Website</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Dolorum culpa atque natus voluptatem tempora ipsum porro cumque, 
+        obcaecati ex corrupti, accusantium dolor 
+        nesciunt sapiente adipisci omnis exercitationem molestias eaque perspiciatis!</p>
+        
+        <div class="row">
+            <div class="about-col">
+                    <h3>Basics</h3>
+                    <p>Basics of web Development are HTML, CSS and Javascript language.
+                    HTML is a very basic language that can be implement using NOTEPAD
+                    CSS is a styling languge to style the plain website into beauty one
+                    Javascript provides funtions to the keys and buttons.</p>
+            </div>
+            <div class="about-col">
+                    <h3>Intermediate</h3>
+                    <p>In Intermediate criteria, we learn about PHP and Bootstrap funtcions.
+                    PHP uses as a linking language and connects with databases.
+                    Bootsrap also beautifies the website but in a very simple language and advance than CSS.</p>
+            </div>
+            <div class="about-col">
+                    <h3>Advance</h3>
+                    <p>In Advance class, you get to know about Databases like, MySQL, MangoDB etc., where
+                    you create a real website with sequential layers of programming connected with your database</p>
+            </div>
+        </div> 
+    </section>
+
+    <section class="contact">
+        <div class="contact">
+            <form onsubmit="sendEmail(); reset();">
+           <h3>Write something...</h3>
+           <input type="text" id="name" placeholder="Your Name" required>
+           <input type="email" id="email" placeholder="Email Id" required>
+           <input type="text" id="phone" placeholder="Phone No." required>
+           <textarea id="message" rows="4" placeholder="What you say??" required></textarea>
+           <button type="submit">Getting Back!</button>
+           </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                Host : "smtp.gmail.com",
+                Username : "chitti1890@gmail.com",
+                Password : "CHITTIPRIYA2002",
+                To : 'chitti1890@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Now contact form Enquiry",
+                Body : "And this is the body"
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
+        
+    <!---javaScript for Toggle Menu----->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+    <!--JavaScript Contact submission-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "chitti1890@gmail.com",
+                Password : "CHITTIPRIYA2002",
+                To : 'chitti1890@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New contact form Enquiry",
+                Body : "And this is the body"
+                }).then(
+                message => alert(message)
+                );
+        }
+    </script>
+</body>
+</html>
